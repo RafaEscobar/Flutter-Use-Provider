@@ -41,7 +41,28 @@ class ScreenOne extends StatelessWidget {
                   },
                 ),
               ),
-            )
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 8, bottom: 8),
+              child: TextFormField(
+                style: const TextStyle(
+                  color: Colors.blue,
+                ),
+                decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: const BorderSide(color: Colors.transparent),
+                  ),
+                  hintText: 'Ingresa una nueva tarea',
+                  border: InputBorder.none,
+                  filled: true,
+                  suffixIcon: IconButton(
+                    onPressed: (){},
+                    icon: const Icon(Icons.add),
+                  )
+                ),
+              ),
+            ),
           ],
         ),
       ),
