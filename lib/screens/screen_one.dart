@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:use_provider/domain/providers/task_provider.dart';
 import 'package:use_provider/domain/widgets/checkbox_widget.dart';
+import 'package:use_provider/screens/screen_two.dart';
 
 class ScreenOne extends StatelessWidget {
   const ScreenOne({super.key});
@@ -14,6 +15,17 @@ class ScreenOne extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Uso de providers'),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const ScreenTwo(),
+              )
+            );
+          },
+        ),
       ),
       body: Body(taskProvider: taskProvider, inputController: inputController, inputFocus: inputFocus,),
     );
