@@ -1,12 +1,12 @@
 class Task{
   String title;
-  String dueDate;
+  String? dueDate;
   bool status;
 
   Task({
     required this.title,
     required this.status,
-    required this.dueDate
+    this.dueDate
   });
 
   void completed(){

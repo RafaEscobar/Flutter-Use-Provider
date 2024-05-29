@@ -14,7 +14,7 @@ class TaskProvider extends ChangeNotifier {
   void addTask(
     String title,
     bool status,
-    String dueDate
+    [String? dueDate]
   ) {
     _tasks.add(Task(title: title, status: status, dueDate: dueDate));
     notifyListeners();
